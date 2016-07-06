@@ -1,0 +1,56 @@
+% The skeleton for producing my publication list in sections Uses biblatex and
+% biber to customized the bibliography output. Sections defined by a
+% combination of keyword= and custom filtering. See
+% http://www.ctan.org/pkg/biblatex
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{7}
+
+\usepackage[defernumbers=true, bibstyle=authoryear, backend=biber, maxbibnames=10,
+    url=false, sorting=ydnt]{biblatex}
+
+\usepackage{hyperref}
+\hypersetup{ % turn off the boxes round URLs
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\addbibresource{matthew_brett.bib}
+\defbibfilter{methodsPlus}{%
+    keyword=computing or keyword=methods
+}
+\defbibfilter{articlesPlus}{%
+    keyword=article or keyword=software
+}
+
+\AtEveryBibitem{\clearlist{language}} % clears language
+
+\begin{document}
+
+\nocite{*}
+
+\printbibheading[title={Matthew Brett -- research products}]
+
+\printbibliography[heading=subbibliography,
+    filter=articlesPlus,
+    notkeyword=omit,
+    title={Selected software, articles, and book chapters}]
+\printbibliography[heading=subbibliography,
+    keyword=abstract,
+    notkeyword=omit,
+    title={Seleected abstracts}]
+\printbibliography[heading=subbibliography,
+    keyword=online,
+    notkeyword=omit,
+    title={Selected online tutorials}]
+
+\end{document}
