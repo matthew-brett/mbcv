@@ -3,14 +3,17 @@
 % combination of keyword= and custom filtering. See
 % http://www.ctan.org/pkg/biblatex
 
-\documentclass[a4paper,11pt]{article}
+\documentclass{cv}
+% Document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathpazo}
+\usepackage{hyperref}
+\usepackage{url}
 
 \pagestyle{plain}
 \pagenumbering{arabic}
-\setcounter{page}{7}
 
 \usepackage[defernumbers=true, bibstyle=authoryear, backend=biber, maxbibnames=10,
     url=false, sorting=ydnt]{biblatex}
@@ -25,6 +28,7 @@
 }
 
 \addbibresource{matthew_brett.bib}
+
 \defbibfilter{methodsPlus}{%
     keyword=computing or keyword=methods
 }
@@ -34,23 +38,213 @@
 
 \AtEveryBibitem{\clearlist{language}} % clears language
 
+\newcommand{\PlaceDate}[2]{{\bf #1} \hfill {\em #2} \\}
+
 \begin{document}
 
 \nocite{*}
 
-\printbibheading[title={Matthew Brett -- research products}]
+{\huge \bf Matthew Brett}
 
-\printbibliography[heading=subbibliography,
-    filter=articlesPlus,
-    notkeyword=omit,
-    title={Selected software, articles, and book chapters}]
-\printbibliography[heading=subbibliography,
+Helen Wills neuroscience institute \\
+210 Barker Hall \\
+University of California \\
+Berkeley CA 94720 \\
+matthew.brett@gmail.com
+
+\begin{cvSection}{Education}
+
+\PlaceDate{Royal London hospital}{1987--1990 }
+Bachelor of medicine and surgery
+
+{\bf Cambridge university} \hfill {\em 1984--1987 } \\
+Open entrance scholarship \\
+BA 2.{\em i}; Experimental psychology
+
+\end{cvSection}
+
+\begin{cvSection}{Research metrics}
+
+{\bf Citations}: 10434 \\
+{\bf h-index}: 30 \\
+{\bf i10-index}: 37
+
+\end{cvSection}
+
+\begin{cvSection}{Neurology}
+
+\begin{cvSubSection}{Experience}
+
+{\bf Radcliffe infirmary, Oxford} \hfill {\em 1995--1996 } \\
+Neurology registrar
+
+{\bf National hospital for neurology, London} \hfill {\em 1994--1995 } \\
+Neurology senior house officer
+
+{\bf St Bartholemew's hospital, London} \hfill {\em 1992--1994 } \\
+Senior house officer in medicine
+
+{\bf Addenbrooke's hospital, Cambridge} \hfill {\em 1992 } \\
+Senior house officer in neurosciences
+
+{\bf Royal London hospital} \hfill {\em 1991 } \\
+House officer in medicine
+
+{\bf Princess Alexandra hospital, Harlow} \hfill {\em 1990 } \\
+House officer in surgery
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Qualifications}
+
+National training number in neurology (UK) \hfill {\em 1996} \\
+Member of the royal college of physicians (UK) \hfill {\em 1994}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Teaching}
+
+{\bf Oxford university} \hfill {\em 1994--1995} \\
+Supervision of medical students in neuroanatomy
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Publications}
+
+\printbibliography[heading=none,
+    keyword=neurology,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\end{cvSection}
+
+\begin{cvSection}{Cognitive and motor neuroscience}
+
+\begin{cvSubSection}{Experience}
+
+{\bf University of California, Berkeley} \hfill {\em 2003--2005 } \\
+Associate specialist in psychology; advised by Rich Ivry
+
+{\bf MRC cognition and brain sciences unit, Cambridge} \hfill {\em 1999--2003 } \\
+Research associate in psychology; advised by John Duncan
+
+{\bf MRC cyclotron unit, Hammersmith hospital / Oxford university}
+\hfill {\em 1996--1999} \\
+Research registrar in neurology; advised by David Brooks (London) and John
+Stein (Oxford)
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Awards}
+
+{\bf British brian and spine foundation training fellowship} \hfill {\em
+1996--1999}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Research supervision}
+
+{\bf PhD by Jessica Grahn} \hfill {\em 2001--2004} \\
+{\em The functional anatomy of musical beat perception}. Jessica is an
+associate professor in the Brain and Mind Institute, Western University,
+Ontario
+
+{\bf PhD by Katja Osswald} \hfill {\em 2000--2004} \\
+{\em The role of SMA and basal ganglia in motor learning, mechanisms of
+apraxia and methods of functional MRI analysis}. Katja is an associate
+lecturer at the department of psychology in York and an NHS clinical
+psychologist.
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Teaching}
+
+{\bf Cambridge university} \hfill {\em 2007--2008} \\
+Supervision in undergraduate neuroscience for Jesus college
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Articles}
+
+\printbibliography[heading=none,
+    keyword=movethink,
+    keyword=article,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Abstracts}
+
+\printbibliography[heading=none,
+    keyword=movethink,
     keyword=abstract,
-    notkeyword=omit,
-    title={Seleected abstracts}]
-\printbibliography[heading=subbibliography,
-    keyword=online,
-    notkeyword=omit,
-    title={Selected online tutorials}]
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\end{cvSection}
+
+\begin{cvSection}{Imaging methodology}
+
+\begin{cvSubSection}{Experience}
+
+{\bf University of California, Berkeley} \hfill {\em 2008--present } \\
+Associate researcher at the brain imaging center
+
+{\bf MRC cognition and brain sciences unit, Cambridge} \hfill {\em 2005--2008}
+\\
+Senior investigator scientist
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Articles}
+
+\printbibliography[heading=none,
+    keyword=methods,
+    keyword=article,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Abstracts}
+
+\printbibliography[heading=none,
+    keyword=methods,
+    keyword=abstract,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\end{cvSection}
+
+\begin{cvSection}{Scientific computing}
+
+\begin{cvSubSection}{Metrics}
+
+{\bf 99th centile} for research code impact: \url{http://depsy.org/person/344202} \\
+{\bf 100th centile} for open-source kudos: \url{https://www.openhub.net/accounts/matthew-brett/kudos}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Articles}
+
+\printbibliography[heading=none,
+    keyword=computing,
+    keyword=article,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Abstracts}
+
+\printbibliography[heading=none,
+    keyword=computing,
+    keyword=abstract,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\end{cvSection}
 
 \end{document}
