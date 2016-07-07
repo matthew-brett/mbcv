@@ -7,7 +7,10 @@
 \usepackage{changepage}
 \usepackage{needspace}
 
+
 % Defines the rSection environment for the large sections within the CV
+% Indentation trick from
+% http://tex.stackexchange.com/questions/35933/indenting-a-whole-paragraph
 \newenvironment{cvSection}[1]{ % 1 input argument - section name
   \needspace{4\baselineskip}
   \sectionskip
@@ -19,8 +22,8 @@
   {\end{adjustwidth}
 }
 
-% A subsection within a main section
-\newenvironment{cvSubSection}[1]{ % 1 input argument - section name
+% A subsection of the CV, within a main section.  Extra indentation.
+\newenvironment{cvSubSection}[1]{ % 1 input argument - subsection name
     \needspace{3\baselineskip}
     {\em #1}\begin{adjustwidth}{0.5cm}{}
     }
