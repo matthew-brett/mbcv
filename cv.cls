@@ -12,17 +12,17 @@
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
-  \begin{adjustwidth}{0.5cm}{}}{\end{adjustwidth}
+  \begin{adjustwidth}{0.5cm}{}
+  }
+  {\end{adjustwidth}
 }
 
 % A subsection within a main section
 \newenvironment{cvSubSection}[1]{ % 1 input argument - section name
-  \sectionskip
-  {\em #1} % Section title
-  \sectionlineskip
-  \begin{adjustwidth}{0.5cm}{}}{\end{adjustwidth}
+    {\em #1}\begin{adjustwidth}{0.5cm}{}
+    }
+    {\end{adjustwidth}
 }
 
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\sectionskip{\medskip} % The space after the heading section
-

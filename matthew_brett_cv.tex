@@ -29,16 +29,27 @@
 
 \addbibresource{matthew_brett.bib}
 
-\defbibfilter{methodsPlus}{%
-    keyword=computing or keyword=methods
-}
-\defbibfilter{articlesPlus}{%
-    keyword=article or keyword=software
-}
-
 \AtEveryBibitem{\clearlist{language}} % clears language
 
+% This stuff below was the result of trial and error to get the bibliography
+% output to a) preserve the subsequent paragraph indentation as indicated by
+% the adjustwidth environments, and b) To have the correct indentation for
+% each entry in the bibliography.  The source from which I was working was
+% http://tex.stackexchange.com/questions/46298/printing-bibliography-with-biblatex-in-tufte-handout-fullwidth-environment
+\defbibenvironment{bibliography}
+  {\list{}{%
+          \leftmargin\bibhang
+  }}
+  {\endlist}
+    {\item}
+
+\AtEveryBibitem{\hskip-\bibhang}
+
 \newcommand{\PlaceDate}[2]{{\bf #1} \hfill {\em #2} \\}
+\newcommand{\PlaceDateNote}[3]{{\bf #1} \hfill {\em #2} \\#3}
+\newcommand{\UCB}{University of California, Berkeley}
+\newcommand{\CBU}{MRC cognition and brain sciences unit, Cambridge}
+% \renewcommand{\printbibliography}[3]{ foo }
 
 \begin{document}
 
@@ -57,9 +68,9 @@ matthew.brett@gmail.com
 \PlaceDate{Royal London hospital}{1987--1990 }
 Bachelor of medicine and surgery
 
-{\bf Cambridge university} \hfill {\em 1984--1987 } \\
+\PlaceDateNote{Cambridge university}{1984--1987 }{
 Open entrance scholarship \\
-BA 2.{\em i}; Experimental psychology
+BA 2.{\em i}; Experimental psychology}
 
 \end{cvSection}
 
@@ -75,23 +86,24 @@ BA 2.{\em i}; Experimental psychology
 
 \begin{cvSubSection}{Experience}
 
-{\bf Radcliffe infirmary, Oxford} \hfill {\em 1995--1996 } \\
-Neurology registrar
+\PlaceDateNote{Radcliffe infirmary, Oxford}
+{1995--1999}
+{Neurology registrar}
 
-{\bf National hospital for neurology, London} \hfill {\em 1994--1995 } \\
-Neurology senior house officer
+\PlaceDateNote{National hospital for neurology, London}{1994--1995 }{
+Neurology senior house officer}
 
-{\bf St Bartholemew's hospital, London} \hfill {\em 1992--1994 } \\
-Senior house officer in medicine
+\PlaceDateNote{St Bartholemew's hospital, London}{1992--1994 }{
+Senior house officer in medicine}
 
-{\bf Addenbrooke's hospital, Cambridge} \hfill {\em 1992 } \\
-Senior house officer in neurosciences
+\PlaceDateNote{Addenbrooke's hospital, Cambridge}{1992 }{
+Senior house officer in neurosciences}
 
-{\bf Royal London hospital} \hfill {\em 1991 } \\
-House officer in medicine
+\PlaceDateNote{Royal London hospital}{1991 }{
+House officer in medicine}
 
-{\bf Princess Alexandra hospital, Harlow} \hfill {\em 1990 } \\
-House officer in surgery
+\PlaceDateNote{Princess Alexandra hospital, Harlow}{1990 }{
+House officer in surgery}
 
 \end{cvSubSection}
 
@@ -104,12 +116,12 @@ Member of the royal college of physicians (UK) \hfill {\em 1994}
 
 \begin{cvSubSection}{Teaching}
 
-{\bf Oxford university} \hfill {\em 1994--1995} \\
-Supervision of medical students in neuroanatomy
+\PlaceDateNote{Oxford university}{1994--1995}{
+Supervision of medical students in neuroanatomy}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Publications}
+\begin{cvSubSection}{Articles}
 
 \printbibliography[heading=none,
     keyword=neurology,
@@ -123,11 +135,11 @@ notkeyword=omit]
 
 \begin{cvSubSection}{Experience}
 
-{\bf University of California, Berkeley} \hfill {\em 2003--2005 } \\
-Associate specialist in psychology; advised by Rich Ivry
+\PlaceDateNote{\UCB}{2003--2005 }{
+Associate specialist in psychology; advised by Rich Ivry}
 
-{\bf MRC cognition and brain sciences unit, Cambridge} \hfill {\em 1999--2003 } \\
-Research associate in psychology; advised by John Duncan
+\PlaceDateNote{\CBU}{1999--2003 }{
+Research associate in psychology; advised by John Duncan}
 
 {\bf MRC cyclotron unit, Hammersmith hospital / Oxford university}
 \hfill {\em 1996--1999} \\
@@ -145,23 +157,23 @@ Stein (Oxford)
 
 \begin{cvSubSection}{Research supervision}
 
-{\bf PhD by Jessica Grahn} \hfill {\em 2001--2004} \\
+\PlaceDateNote{PhD by Jessica Grahn}{2001--2004}{
 {\em The functional anatomy of musical beat perception}. Jessica is an
 associate professor in the Brain and Mind Institute, Western University,
-Ontario
+Ontario}
 
-{\bf PhD by Katja Osswald} \hfill {\em 2000--2004} \\
+\PlaceDateNote{PhD by Katja Osswald}{2000--2004}{
 {\em The role of SMA and basal ganglia in motor learning, mechanisms of
 apraxia and methods of functional MRI analysis}. Katja is an associate
 lecturer at the department of psychology in York and an NHS clinical
-psychologist.
+psychologist}
 
 \end{cvSubSection}
 
 \begin{cvSubSection}{Teaching}
 
-{\bf Cambridge university} \hfill {\em 2007--2008} \\
-Supervision in undergraduate neuroscience for Jesus college
+\PlaceDateNote{Cambridge university}{2007--2008}{
+Supervision in undergraduate neuroscience for Jesus college}
 
 \end{cvSubSection}
 
@@ -189,12 +201,11 @@ notkeyword=omit]
 
 \begin{cvSubSection}{Experience}
 
-{\bf University of California, Berkeley} \hfill {\em 2008--present } \\
-Associate researcher at the brain imaging center
+\PlaceDateNote{\UCB}{2008--present }{
+Associate researcher at the brain imaging center}
 
-{\bf MRC cognition and brain sciences unit, Cambridge} \hfill {\em 2005--2008}
-\\
-Senior investigator scientist
+\PlaceDateNote{\CBU}{2005--2008}{
+Senior investigator scientist}
 
 \end{cvSubSection}
 
