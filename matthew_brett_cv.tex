@@ -11,6 +11,7 @@
 \usepackage{mathpazo}
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{footmisc}
 
 \pagestyle{plain}
 \pagenumbering{arabic}
@@ -28,6 +29,7 @@
 }
 
 \addbibresource{matthew_brett.bib}
+\addbibresource{cv.bib}
 
 \AtEveryBibitem{\clearlist{language}} % clears language
 
@@ -45,11 +47,16 @@
 
 \AtEveryBibitem{\hskip-\bibhang}
 
+% Select imaging and statistics entries in bib database
+\defbibfilter{imagingOrStatistics}{%
+    keyword=imaging or keyword=statistics
+}
+
 \newcommand{\PlaceDate}[2]{{\bf #1} \hfill {\em #2} \\}
 \newcommand{\PlaceDateNote}[3]{{\bf #1} \hfill {\em #2} \\#3}
 \newcommand{\UCB}{University of California, Berkeley}
 \newcommand{\CBU}{MRC cognition and brain sciences unit, Cambridge}
-% \renewcommand{\printbibliography}[3]{ foo }
+\newcommand{\Pkg}[1]{{\tt #1}}
 
 \begin{document}
 
@@ -128,21 +135,21 @@ House officer in surgery}
 
 \begin{cvSection}{Neurology}
 
-\begin{cvSubSection}{Qualifications}
+\begin{cvSubSection}{Neurology qualifications}
 
 National training number in neurology (UK) \hfill {\em 1996} \\
 Member of the royal college of physicians (UK) \hfill {\em 1994}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Teaching}
+\begin{cvSubSection}{Neurology teaching}
 
 \PlaceDateNote{Oxford university}{1994--1995}{
 Supervision of medical students in neuroanatomy}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Articles}
+\begin{cvSubSection}{Neurology articles}
 
 \printbibliography[heading=none,
     keyword=neurology,
@@ -154,36 +161,41 @@ notkeyword=omit]
 
 \begin{cvSection}{Cognitive and motor neuroscience}
 
-\begin{cvSubSection}{Awards}
+\begin{cvSubSection}{Neuroscience awards}
 
 {\bf British brain and spine foundation training fellowship} \hfill {\em
 1996--1999}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Research supervision}
+\begin{cvSubSection}{Neuroscience research supervision}
 
-\PlaceDateNote{PhD by Jessica Grahn}{2001--2004}{
-{\em The functional anatomy of musical beat perception}. Jessica is an
-associate professor in the Brain and Mind Institute, Western University,
-Ontario}
+\PlaceDateNote{Cambridge university BA final year projects}{2007--2008}
+{Final year undergraduate projects in experimental psychology by Sam Burnand
+and Rich Armstrong.  Projects on functional MRI of response selection.  Both
+projects graded as first class}
 
-\PlaceDateNote{PhD by Katja Osswald}{2000--2004}{
-{\em The role of SMA and basal ganglia in motor learning, mechanisms of
-apraxia and methods of functional MRI analysis}. Katja is an associate
-lecturer at the department of psychology in York and an NHS clinical
+\PlaceDateNote{Cambridge university PhD}{2001--2004}
+{Jessica Grahn: {\em The functional anatomy of musical beat perception}.
+Jessica is an associate professor in the Brain and Mind Institute, Western
+University, Ontario}
+
+\PlaceDateNote{Cambridge university PhD}{2000--2004}
+{Katja Osswald: {\em The role of SMA and basal ganglia in motor learning,
+mechanisms of apraxia and methods of functional MRI analysis}. Katja is an
+associate lecturer at the department of psychology in York and an NHS clinical
 psychologist}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Teaching}
+\begin{cvSubSection}{Neuroscience teaching}
 
 \PlaceDateNote{Cambridge university}{2007--2008}{
 Supervision in undergraduate neuroscience for Jesus college}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Articles}
+\begin{cvSubSection}{Neuroscience articles}
 
 \printbibliography[heading=none,
     keyword=movethink,
@@ -192,7 +204,7 @@ notkeyword=omit]
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Abstracts}
+\begin{cvSubSection}{Neuroscience abstracts}
 
 \printbibliography[heading=none,
     keyword=movethink,
@@ -203,9 +215,84 @@ notkeyword=omit]
 
 \end{cvSection}
 
-\begin{cvSection}{Imaging methodology}
+\begin{cvSection}{Imaging methods and statistics}
 
-\begin{cvSubSection}{Articles}
+\begin{cvSubSection}{Methods research supervision}
+
+\PlaceDateNote{Cambridge university post-doctoral research}{2002--2006}
+{Ferath Kherif, working on multivariate statistics for clustering and
+diagnostics of functional imaging data. Ferath is a principal investigator at
+the Laboratory of Research in Neuroimaging, Lausanne, Switzerland}
+
+\PlaceDateNote{Cambridge university post-doctoral research}{2001--2002}
+{Alexandre Andrade, on brain surface-based functional MRI statistics, coherence
+analysis.  Alexandre is assistant professor at the Physics Department of the
+Faculty of Sciences of the University of Lisbon}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Methods teaching}
+
+\PlaceDateNote{\UCB}{2013--present}
+{Organizer for ``practical neuroimaging'' post-graduate course -- combines
+teaching of concepts behind imaging analysis with training in scientific
+computing}
+
+\PlaceDateNote{\UCB}{2015}
+{Co-taught with Jarrod Millman.  Undergraduate and masters statistics course
+on ``Reproducible and collaborative statistical data science''}
+
+\PlaceDateNote{\UCB}{2008--present}
+{Lecturer on functional MRI spatial processing and statistics for
+post-graduate ``Functional MRI methodology seminar''}
+
+\PlaceDateNote{\UCB}{2008--2011}
+{Speaker for post-graduate ``Neuroimaging seminar series''}
+
+\PlaceDateNote{Stanford University}{2013}
+{Lecturer at the ``fMRI data analysis workshop''}
+
+\PlaceDateNote{San Francisco}{2009}
+{Lecturer on FMRIB Software Library course, speaking on ``Experimental
+design''}
+
+\PlaceDateNote{\CBU}{1999--2003, 2005--2008}
+{Regular speaker at ``Imaging interest group'' seminar series on imaging
+methods}
+
+\PlaceDateNote{\CBU}{2007}
+{Lecturer for short course on SPM}
+
+\PlaceDateNote{Human brain mapping conference}{2004, 2006, 2007}
+{Lecturer for introductory training course on functional MRI}
+
+\PlaceDateNote{Oslo, Norway}{2005}
+{Co-organized and co-taught with Ansgar Furst. 4-day course on FMRI analysis
+using SPM software}
+
+\PlaceDateNote{Yale}{2005}
+{Faculty for course on anatomical and functional MRI analysis using SPM}
+
+\PlaceDateNote{Paris, France}{2000--2003}
+{Lecturer on statistics and spatial processing for functional imaging analysis
+course}
+
+\PlaceDateNote{Melbourne, Australia}{2001}
+{Only teacher of 9 hours of lectures and 5 hours of practical sessions on
+functional MRI analysis using SPM software}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Selected methods tutorials}
+
+\printbibliography[heading=none,
+    filter=imagingOrStatistics,
+    keyword=online,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Methods articles}
 
 \printbibliography[heading=none,
     keyword=methods,
@@ -214,7 +301,7 @@ notkeyword=omit]
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Abstracts}
+\begin{cvSubSection}{Methods abstracts}
 
 \printbibliography[heading=none,
     keyword=methods,
@@ -227,14 +314,116 @@ notkeyword=omit]
 
 \begin{cvSection}{Scientific computing}
 
-\begin{cvSubSection}{Metrics}
+\begin{cvSubSection}{Computing leadership}
 
-{\bf 99th centile} for research code impact: \url{http://depsy.org/person/344202} \\
-{\bf 100th centile} for open-source kudos: \url{https://www.openhub.net/accounts/matthew-brett/kudos}
+\PlaceDateNote{Neuroimaging in Python project}{2004--present}
+{Co-founder (with Jarrod Millman) of the neuroimaging in Python project (NIPY)
+    \url{http://nipy.org}.  Co-author (with Jarrod Millman) of R01 grant to
+    fund NIPY development (see below).  Set
+    NIPY community development standards including BSD code license, version
+    control, continuous integration testing on all major platforms, automated
+    reporting of code test coverage, formal code review.  The NIPY
+    organization \url{https://github.com/nipy} is now home to 12 neuroimaging
+code projects.  Lead author and maintainer of \Pkg{nibabel} and \Pkg{nipy}
+software projects; third contributor by code commits of \Pkg{dipy} software
+project (see below).  99th centile personal ranking for scientific code impact
+by Depsy.org \footnote{See: \url{http://depsy.org} and {\em Nature} 2016: 529,
+115–116\label{depsy}}. I believe I am the author of the first fully
+reproducible publication in neuroimaging (Aston, Brett and Turkheimer, 2006).
+}
+
+\PlaceDateNote{Scientific Python developer}{2004--present}
+{Contributor to all the main scientific Python packages, including \Pkg{numpy,
+    scipy, matplotlib, Cython, statsmodels}; responsible for maintenance and
+    release of installers for many scientific Python packages, including
+    \Pkg{numpy, scipy, matplotlib, Cython, statsmodels}; organization member
+    of projects \Pkg{numpy, scipy, matplotlib, scikit-image, Python-pillow,
+    MacPython} and the Python packaging
+authority.}
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Articles}
+\begin{cvSubSection}{Computing grants}
+
+\PlaceDateNote{NIH RO1 grant}{2007--2010}
+{Co-author (with Jarrod Millman) of NIH grant 5R01MH081909-02 ``Continued
+development and maintenance of the Neuroimaging In Python project''}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Selected scientific software}
+
+See \url{https://www.openhub.net/accounts/matthew-brett}
+
+\PlaceDateNote{Dipy}{2009--present}
+{Third-ranked developer by code commits.  Python package for analysis of
+    diffusion MRI data.  69 contributors, 43,806 lines of code, estimated 11
+    years of developer effort
+    \footnote{\url{https://www.openhub.net/p/dipy}}. 99th centile for research
+impact among all scientific R and Python projects \footref{depsy}.}
+
+\PlaceDateNote{Nipy}{2006--present}
+{Lead developer and maintainer.  Spatial processing and statistical analysis
+of functional MRI data.  59 contributors, 69,522 lines of code, estimated 18
+years of developer effort \footnote{\url{https://www.openhub.net/p/nipy}}.
+97th centile for research impact among all R, Python projects
+\footref{depsy}.}
+
+\PlaceDateNote{Nibabel}{2005--present}
+{Lead developer and maintainer. Reads and writes standard neuroimaging file
+    formats.  46 contributors, 28,473 lines of code, estimated 7 years of
+    developer effort \footnote{\url{https://www.openhub.net/p/nibabel}}.
+    100th centile for research impact among all R, Python projects
+\footref{depsy}.}
+
+\PlaceDateNote{MarsBaR}{2003--present}
+{Lead developer and maintainer. Region of interest analysis for functional
+    imaging data.  3 contributors, representing 22,166 lines of code,
+estimated 6 years of developer effort
+\footnote{\url{https://www.openhub.net/p/marsbar}}.  The abstract for MarsBaR
+has been cited 2127 times as of July 2016.}
+
+\PlaceDateNote{Phiwave}{2004--2005}
+{Lead developer and maintainer.  Wavelet analysis for spatial inference on
+functional imaging data.  2 contributors, 5,367 lines of code, estimated
+estimated 2 years of effort
+\footnote{\url{https://www.openhub.net/p/phiwave}}.}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Computing teaching}
+
+See also: teaching on imaging methods and statistics.
+
+\PlaceDateNote{\UCB}{2016}
+{Certified as instructor for Software Carpentry workshops \footref{swc}}
+
+\PlaceDateNote{Havana, Cuba}{2013}
+{Invited speaker and teacher at the Latin-American summer school on
+Neuroinformatics, speaking on ``The need and methods for reproducible
+science''}
+
+\PlaceDateNote{Lawrence Berkeley National Laboratory}{2012}
+{Instructor for Software Carpentry
+    \footnote{
+        Software carpentry (\url{http://software-carpentry.org}) is an
+        international project to teach scientists effective use of computing
+        tools
+\label{swc}}
+boot-camp}
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Selected computing tutorials}
+
+\printbibliography[heading=none,
+    keyword=computing,
+    keyword=online,
+notkeyword=omit]
+
+\end{cvSubSection}
+
+\begin{cvSubSection}{Computing articles}
 
 \printbibliography[heading=none,
     keyword=computing,
@@ -243,7 +432,7 @@ notkeyword=omit]
 
 \end{cvSubSection}
 
-\begin{cvSubSection}{Abstracts}
+\begin{cvSubSection}{Computing abstracts}
 
 \printbibliography[heading=none,
     keyword=computing,
@@ -254,4 +443,31 @@ notkeyword=omit]
 
 \end{cvSection}
 
+\begin{cvSection}{Service}
+
+    {\em Ad-hoc reviewer for} NeuroImage; Human Brain Mapping; Journal of
+    Cognitive Neuroscience; Neuroscience Letters; Clinical Neurophysiology;
+    Journal of Neuroimaging; the Journal of Clinical and Experimental
+    Neuropsychology; Frontiers in Neuroinformatics; Computing in Science and
+    Engineering; Frontiers in Brain Imaging Methods; Frontiers in
+    Neuroanatomy; Public Library of Science One.
+
+\PlaceDateNote{\UCB}{2015--present}
+{Organizer for the imaging analysis discussion group -- a weekly / bi-weekly
+seminar series on analysis of imaging data}
+
+\PlaceDateNote{\CBU}{2007--2008}
+{Graduate committee member}
+
+\PlaceDateNote{\CBU}{2001--2003, 2005--2008}
+{Member of the imaging management committee}
+
+\PlaceDateNote{\CBU}{2006--2008}
+{Organizer of imaging methods journal club}
+
+\PlaceDateNote{\CBU}{1999--2003}
+{Organizer for the ``Imaging interest group'' -- a Cambridge-wide weekly
+seminar on functional imaging analysis and results}
+
+\end{cvSection}
 \end{document}

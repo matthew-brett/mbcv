@@ -16,7 +16,7 @@
 \NewDocumentEnvironment{cvSection}{m O{}}{
     % 1 input argument - section name
     % 1 optional argument - extra markup at end of section
-  \needspace{4\baselineskip}
+  \Needspace{6\baselineskip}
   {\bf \MakeUppercase{#1}}#2 % Section title plus any extra stuff
   \sectionskip
   \sectionlineskip
@@ -30,7 +30,7 @@
 \NewDocumentEnvironment{cvSubSection}{m O{}}{
     % 1 input argument - subsection name
     % 1 optional argument - extra markup at end of subsection name
-    \needspace{3\baselineskip}
+    \Needspace{4\baselineskip}
     {\em #1}#2
     \begin{adjustwidth}{0.5cm}{}
     }
