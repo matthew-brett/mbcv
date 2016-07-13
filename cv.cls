@@ -30,7 +30,7 @@
 \NewDocumentEnvironment{cvSubSection}{m O{}}{
     % 1 input argument - subsection name
     % 1 optional argument - extra markup at end of subsection name
-    \Needspace{4\baselineskip}
+    \Needspace{5\baselineskip}
     {\em #1}#2
     \begin{adjustwidth}{0.5cm}{}
     }
