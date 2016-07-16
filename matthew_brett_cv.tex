@@ -47,9 +47,9 @@
 
 \AtEveryBibitem{\hskip-\bibhang}
 
-% Select imaging and statistics entries in bib database
-\defbibfilter{imagingOrStatistics}{%
-    keyword=imaging or keyword=statistics
+% Select methods and statistics entries in bib database
+\defbibfilter{methodsOrStatistics}{%
+    keyword=methods or keyword=statistics
 }
 
 \newcommand{\PlaceDate}[2]{{\bf #1} \hfill {\em #2} \\}
@@ -331,7 +331,7 @@ Faculty of Sciences of the University of Lisbon}
 \begin{cvSubSection}{Selected methods tutorials}
 
 \printbibliography[heading=none,
-    filter=imagingOrStatistics,
+    filter=methodsOrStatistics,
     keyword=online,
 notkeyword=omit]
 
