@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[defernumbers=true, bibstyle=authoryear, backend=biber, maxbibnames=10,
+    url=false, dashed=false, sorting=ydnt]{biblatex}
+\addbibresource{matthew_brett.bib}
+
+\begin{document}
+
+\nocite{*}
+
+\printbibliography[heading=none,
+    keyword=article,
+notkeyword=omit]
+
+\end{document}
+

@@ -1,3 +1,6 @@
 !matthew_brett_cv.tex
 !matthew_brett_cv.bib
 matthew_brett_cv.*
+!mb_pubs.tex
+mb_pubs.*
+texput.log
