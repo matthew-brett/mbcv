@@ -16,8 +16,13 @@
 \pagestyle{plain}
 \pagenumbering{arabic}
 
-\usepackage[defernumbers=true, bibstyle=authoryear, backend=biber, maxbibnames=10,
-    url=false, dashed=false, sorting=ydnt]{biblatex}
+\usepackage[defernumbers=true,
+    bibstyle=authoryear,
+    backend=biber,
+    maxbibnames=10,
+    url=false,
+    sorting=ydnt,
+    style=apa]{biblatex}
 
 \usepackage{hyperref}
 \hypersetup{ % turn off the boxes round URLs
@@ -71,22 +76,66 @@ m.brett@bham.ac.uk
 
 \begin{cvSection}{Data science teaching}
 
-\PlaceDate{Resampling statistics textbook}{2018--present}
+\PlaceDateNote{Resampling statistics textbook}{2018--present}
     {Finalizing a contract with SAGE publishing for a new edition of a classic
     text ``Resampling: the new statistics'' by Julian Simon:
     \url{http://www.resample.com/intro-text-online}. The new edition will use
     R and Python programming languages to illustrate and implement the
     algorithms in the text}.
 
-\PlaceDate{Data science for everyone}{2018--present}
-    {20 credit widening horizons module at \UoB. 38 students learning data
+\PlaceDateNote{Data science for everyone WHM}{2018--present}
+    {20 credit widening horizons module. 38 students learning data
     analysis and statistical inference using the Python programming language.
     Interactive textbook at \url{https://matthew-brett.github.io/dsfe}.}
 
-\PlaceDateNote{\UCB}{2015}
-{Co-taught with Jarrod Millman.  Undergraduate and masters statistics course
-on ``Reproducible and collaborative statistical data science''. We describe
-    and assess the course in \cite{millman2018rcsds}.}
+\PlaceDateNote{Turing Fellow}{August 2018--present}
+    {Fellow of the Alan Turing Institute (ATI)}
+
+\PlaceDateNote{Interactive beginners tutorial for R}{2018--present}
+    {Full interactive beginners tutorial for the R programming language using
+    the DataCamp platform, currently hosted at
+    \url{https://www.datacamp.com/courses/r-from-scratch}. In collaboration
+    with the ATI, refactored course so it can be deployed on \UoB\, and ATI
+    servers.}
+
+\PlaceDateNote{MSc teaching on atmospheric data processing}{2019--present}
+    {Four weeks teaching on R and data analysis for MSc programmes on {\em
+    Atmospheric Data Processing and Statistics} and {\em Air Quality Data
+    Analysis and Interpretation}. 8 hours of lectures / practicals.}
+
+
+\PlaceDateNote{R teaching for GGM108: Research methods, field work, and data
+    analysis}{2019--present}
+    {Four weeks geography undergraduate teaching on R and data analysis with a
+    total of 8 hours of lectures, 10 hours of practicals}.
+
+\PlaceDateNote{R teaching for BIO240: Communication and Skills in
+    Biosciences}{2017--present}
+    {Two assignments of self-paced study and assessment using R.}
+
+\PlaceDateNote{Pilot courses for data science teaching}{September 2017--present}
+    {Three pilot courses for teaching programming for data analysis to
+    undergraduates with no previous experience of programming, the latter two
+    funded by an Educational Enhancement Fund grant ``Strategies to engage
+    students in programming for data analysis'' (see below).}
+
+\PlaceDateNote{Peer learning for academic computing}{2017--preset}
+    {Founder and co-organizer of ``The Hacker Within'', a monthly
+    peer-learning group on academic computing.}
+
+\PlaceDateNote{Reproducible and collaborative statistical data science}{2015}
+    {Undergraduate and masters course, co-taught with Jarrod Millman for the
+    statistics department at \UCB.  We describe and assess the course in
+    \cite{millman2018rcsds}.}
+
+\PlaceDateNote{Data science methods for teaching imaging
+    analysis}{1998--present}
+    {I have been developing data science teaching methods since the start of
+    my academic career, in 1996, beginning with online tutorials in Matlab
+    (e.g.
+    \url{http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesStatistics}), and
+    developing into full courses implementing data science teaching methods in
+    brain imaging, from 2013 (see below).}
 
 \end{cvSection}
 
@@ -167,9 +216,9 @@ development and maintenance of the Neuroimaging In Python project''}
 {\bf British brain and spine foundation training fellowship} \hfill {\em
 1996--1999}
 
-\PlaceDateNote{Member of the Royal College of Physicians}{1994}{}
+{\bf Member of the Royal College of Physicians} \hfill {\em 1994}
 
-\PlaceDateNote{Open entrance scholarship to Cambridge University}{1984}{}
+{\bf Open entrance scholarship to Cambridge University} \hfill {\em 1984}
 
 \end{cvSection}
 
@@ -213,11 +262,6 @@ Faculty of Sciences of the University of Lisbon}
 {Lead instructor for Berkeley post-graduate course ``PSYCH 214 -- functional
 MRI methods'' \url{https://bic-berkeley.github.io/psych-214-fall-2016}}
 
-\PlaceDateNote{Havana, Cuba}{2013}
-{Invited speaker and teacher at the Latin-American summer school on
-Neuroinformatics, speaking on ``The need and methods for reproducible
-science''}
-
 \PlaceDateNote{\UCB}{2013--2017}
 {Organizer, designer and main teacher for ``practical neuroimaging''
 post-graduate course -- combines teaching of concepts behind imaging analysis
@@ -225,6 +269,11 @@ with training in scientific computing}
 
 \PlaceDateNote{\UCB}{2015--2017}
 {Organizer: imaging analysis discussion group}
+
+\PlaceDateNote{Havana, Cuba}{2013}
+{Invited speaker and teacher at the Latin-American summer school on
+Neuroinformatics, speaking on ``The need and methods for reproducible
+science''}
 
 \PlaceDateNote{\UCB}{2008--2017}
 {Lecturer on functional MRI spatial processing and statistics for
@@ -291,13 +340,13 @@ MacPython} and the Python packaging authority.}
     {Third contributor by commits.  \Pkg{dipy} is a Python library for
     analysis of diffusion imaging data}.
 
-\PlaceDateNote{MarsBaR: lead author and maintainer}{2003--present}
+\PlaceDateNote{\Pkg{MarsBaR}: lead author and maintainer}{2003--present}
 {Widely used region of interest analysis for functional
-    imaging data.  MarsBaR abstract has been
+    imaging data in Matlab.  MarsBaR abstract has been
 cited 2475 times as of March 2019.}
 
-\PlaceDateNote{Phiwave: lead author and maintainer}{2004--2005}
-{Wavelet analysis for spatial inference on
+    \PlaceDateNote{\Pkg{Phiwave}: lead author and maintainer}{2004--2005}
+{Matlab toolbox implementing wavelet analysis for spatial inference on
     functional imaging data.}
 
 \end{cvSection}
