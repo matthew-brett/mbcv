@@ -14,12 +14,12 @@
 \usepackage{footmisc}
 
 \pagestyle{plain}
-\pagenumbering{arabic}
+\pagenumbering{gobble}
 
 \usepackage[defernumbers=true,
     bibstyle=authoryear,
     backend=biber,
-    maxbibnames=10,
+    maxbibnames=100,
     url=false,
     sorting=ydnt,
     style=apa]{biblatex}
@@ -66,15 +66,30 @@
 
 \begin{document}
 
-\nocite{*}
-
 {\huge \bf Matthew Brett}
 
-School of Psychology \\
-Birmingham University \\
+College of Life and Environmental Sciences, University of Birmingham \\
 m.brett@bham.ac.uk
 
-\begin{cvSection}{Education}
+\begin{cvSection}{Selected work and education}
+
+\PlaceDateNote{Turing Fellow}{August 2018--present}
+    {Fellow of the Alan Turing Institute}
+
+\PlaceDateNote{\UoB}{2017--present }{
+Lecturer in data science}
+
+\PlaceDateNote{Developer: Python for data analysis}{2004--present}
+{Contributions to major libraries including \Pkg{numpy, scipy, matplotlib,
+    Cython, statsmodels}}
+
+\PlaceDateNote{\UCB}{2008--2017 }{
+Associate researcher at the Brain Imaging Center}
+
+\PlaceDateNote{\CBU}{2005--2008}{
+Senior investigator scientist}
+
+{\bf Membership of the Royal College of Physicians} \hfill {\em 1994}
 
 \PlaceDate{Royal London Hospital}{1987--1990 }
 Bachelor of medicine and surgery
@@ -84,292 +99,20 @@ BA Experimental psychology}
 
 \end{cvSection}
 
-\begin{cvSection}{Work history}
+\begin{cvSection}{Research metrics}
 
-\PlaceDateNote{\UoB}{2017--present }{
-Lecturer in psychology and data science}
-
-\PlaceDateNote{\UCB}{2008--2017 }{
-Associate researcher at the Brain Imaging Center}
-
-\PlaceDateNote{\CBU}{2005--2008}{
-Senior investigator scientist}
-
-\PlaceDateNote{\UCB}{2003--2005 }{
-    Associate specialist in psychology}
-
-\PlaceDateNote{\CBU}{1999--2003 }{
-    Research associate in psychology}
-
-\PlaceDateNote{
-MRC Cyclotron Unit, Hammersmith Hospital / Physiology Laboratory, Oxford}
-{1996--1999}
-    {Research registrar in neurology}
-
-\PlaceDateNote{Radcliffe Infirmary, Oxford}
-{1995--1999}
-{Neurology registrar}
-
-\PlaceDateNote{National Hospital for Neurology, London}{1994--1995 }{
-Neurology senior house officer}
-
-\PlaceDateNote{St Bartholemew's Hospital, London}{1992--1994 }{
-Senior house officer in medicine}
-
-\PlaceDateNote{Addenbrooke's Hospital, Cambridge}{1992 }{
-Senior house officer in neurosciences}
-
-\PlaceDateNote{Royal London Hospital}{1991 }{
-House officer in medicine}
-
-\PlaceDateNote{Princess Alexandra Hospital, Harlow}{1990 }{
-House officer in surgery}
+{\bf Citations}: 16770 \\
+{\bf h-index}: 35 \\
+{\bf i10-index}: 45
 
 \end{cvSection}
 
-\begin{cvSection}{Awards and qualifications}
+\begin{cvSection}{Selected publications}
 
-\PlaceDateNote{Turing Fellow}{August 2018--present}
-    {Fellow of the Alan Turing Institute}
+\nocite{virtanen2020scipy, millman2018rcsds, Poline2012, Brett2007,
+    Nichols2005}
 
-\PlaceDateNote{NIH RO1 grant}{2007--2010}
-{Co-author (with Jarrod Millman) of NIH grant 5R01MH081909-02 ``Continued
-development and maintenance of the Neuroimaging In Python project''}
-
-{\bf British brain and spine foundation training fellowship} \hfill {\em
-1996--1999}
-
-{\bf Membership of the Royal College of Physicians} \hfill {\em 1994}
-
-{\bf Open entrance scholarship to Cambridge University} \hfill {\em 1984}
-
-\end{cvSection}
-
-\begin{cvSection}{Data science teaching}
-
-\PlaceDateNote{Resampling statistics textbook}{present}
-    {Finalizing a contract with SAGE publishing for a new edition of a classic
-    text ``Resampling: the new statistics'' by Julian Simon:
-    \url{http://www.resample.com/intro-text-online}. The new edition will use
-    R and Python programming languages to illustrate and implement the
-    algorithms in the text}.
-
-\PlaceDateNote{R teaching for GGM108: Research methods, field work, and data
-    analysis}{2019--present}
-    {Four weeks geography undergraduate teaching on R and data analysis; 250
-    students, 8 hours of lectures, 10 hours of practicals}.
-
-\PlaceDateNote{MSc teaching on atmospheric data processing}{2019--present}
-    {Four weeks teaching on R and data analysis for MSc programmes on {\em
-    Atmospheric Data Processing and Statistics} and {\em Air Quality Data
-    Analysis and Interpretation}. 34 students, 8 hours of lectures /
-    practicals.}
-
-\PlaceDateNote{Data science for everyone WHM}{2018--present}
-    {20 credit widening horizons module. 38 students learning data
-    analysis and statistical inference using the Python programming language.
-    Interactive textbook at \url{https://matthew-brett.github.io/dsfe}.}
-
-\PlaceDateNote{Interactive beginners tutorial for R}{2018--present}
-    {Full interactive beginners tutorial for the R programming language using
-    the DataCamp platform, currently hosted at
-    \url{https://www.datacamp.com/courses/r-from-scratch}. In collaboration
-    with the Alan Turing Institute (ATI), refactored course so it can be deployed on
-    \UoB and ATI servers.}
-
-\PlaceDateNote{R teaching for BIO240: Communication and Skills in
-    Biosciences}{2017--present}
-    {250 students; two 5 hour assignments of self-paced study and assessment
-    using R.}
-
-\PlaceDateNote{Pilot courses for data science teaching}{September 2017--present}
-    {Three pilot courses for teaching programming for data analysis to
-    undergraduates with no previous experience of programming, the latter two
-    funded by a \UoB Educational Enhancement Fund grant ``Strategies to engage
-    students in programming for data analysis''.}
-
-\PlaceDateNote{Peer learning for academic computing}{2017--preset}
-    {Founder and co-organizer of ``The Hacker Within'', a monthly
-    peer-learning group on academic computing.}
-
-\PlaceDateNote{Reproducible and collaborative statistical data science}{2015}
-    {40 undergraduates and 10 masters students, co-taught with Jarrod Millman
-    for the statistics department at the \UCB.  We describe and assess the course
-    in \cite{millman2018rcsds}.}
-
-\PlaceDateNote{Data science methods for teaching imaging
-    analysis}{1998--present}
-    {I have been developing data science teaching methods since the start of
-    my academic career, in 1996, beginning with online tutorials in Matlab
-    (e.g.
-    \url{http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesStatistics}), and
-    developing into full courses implementing data science teaching methods in
-    brain imaging, from 2013 (see below).}
-
-\end{cvSection}
-
-\begin{cvSection}{Other teaching}
-
-\PlaceDateNote{\UCB}{2016}
-    {Certified as instructor for Software Carpentry workshops}
-
-\PlaceDateNote{\UCB}{2016}
-{Lead instructor for Berkeley post-graduate course ``PSYCH 214 -- functional
-MRI methods'' \url{https://bic-berkeley.github.io/psych-214-fall-2016}}
-
-\PlaceDateNote{\UCB}{2013--2017}
-{Organizer, designer and main teacher for ``practical neuroimaging''
-post-graduate course -- combines teaching of concepts behind imaging analysis
-with training in scientific computing}
-
-\PlaceDateNote{\UCB}{2015--2017}
-{Organizer: imaging analysis discussion group}
-
-\PlaceDateNote{Havana, Cuba}{2013}
-{Invited speaker and teacher at the Latin-American summer school on
-Neuroinformatics, speaking on ``The need and methods for reproducible
-science''}
-
-\PlaceDateNote{\UCB}{2008--2017}
-{Lecturer on functional MRI spatial processing and statistics for
-post-graduate ``Functional MRI methodology seminar''}
-
-\PlaceDateNote{Stanford University}{2013}
-{Lecturer at the ``fMRI data analysis workshop''}
-
-\PlaceDateNote{\UCB}{2008--2011}
-{Speaker for post-graduate ``Neuroimaging seminar series''}
-
-\PlaceDateNote{San Francisco}{2009}
-{Lecturer on FMRIB Software Library course, speaking on ``Experimental
-design''}
-
-\PlaceDateNote{\CBU}{1999--2003, 2005--2008}
-{Organizer (1999--2003) and regular speaker at ``Imaging interest group''
-seminar series}
-
-\PlaceDateNote{\CBU}{2007}
-{Lecturer for short course on SPM}
-
-\PlaceDateNote{Human Brain Mapping conference}{2004, 2006, 2007}
-{Lecturer for introductory training course on functional MRI}
-
-\PlaceDateNote{Oslo, Norway}{2005}
-{Co-organized and co-taught with Ansgar Furst. 4-day course on FMRI analysis
-using SPM software}
-
-\PlaceDateNote{Yale}{2005}
-{Faculty for course on anatomical and functional MRI analysis using SPM}
-
-\PlaceDateNote{Paris, France}{2000--2003}
-{Lecturer on statistics and spatial processing for functional imaging analysis
-course}
-
-\PlaceDateNote{Melbourne, Australia}{2001}
-{Only teacher of 9 hours of lectures and 5 hours of practical sessions on
-functional MRI analysis using SPM software}
-
-\end{cvSection}
-
-\begin{cvSection}{Scientific computing}
-
-\PlaceDateNote{Scientific Python: developer}{2004--present}
-{Contributor to all main scientific Python packages, including
-    \Pkg{numpy, scipy, matplotlib, Cython, statsmodels}; organization member
-    of projects \Pkg{numpy, scipy, matplotlib, scikit-image, Python-pillow,
-MacPython} and the Python packaging authority.}
-
-\PlaceDateNote{Neuroimaging in Python project}{2004--present}
-{Co-founder (with Jarrod Millman) of the neuroimaging in Python project (NIPY)
-    \url{http://nipy.org}.  Nipy is now home to 12 neuroimaging
-    code projects}
-
-\PlaceDateNote{\Pkg{nibabel}: lead author}{2008--present}
-    {A foundation library for neuroimaging data formats}
-
-\PlaceDateNote{\Pkg{NiPy}: lead author and maintainer}{2008--present}
-    {Project implementing spatial processing and statistics for functional MRI
-    data.}
-
-\PlaceDateNote{\Pkg{DiPy}: developer}{2009--present}
-    {Third contributor by commits.  \Pkg{dipy} is a Python library for
-    analysis of diffusion imaging data}.
-
-\PlaceDateNote{\Pkg{MarsBaR}: lead author and maintainer}{2003--present}
-{Widely used region of interest analysis toolbox for functional imaging data
-    in Matlab.  MarsBaR abstract has been cited 2475 times as of March 2019.}
-
-    \PlaceDateNote{\Pkg{Phiwave}: lead author and maintainer}{2004--2005}
-{Matlab toolbox implementing wavelet analysis for spatial inference on
-    functional imaging data.}
-
-\end{cvSection}
-
-\begin{cvSection}{Research supervision}
-
-\PlaceDateNote{\CBU}{2007--2008}
-{Member of the Graduate Committee}
-
-\PlaceDateNote{Cambridge University BA}{2007--2008}
-{Final year undergraduate projects in experimental psychology}
-
-\PlaceDateNote{Cambridge University post-doctoral research}{2002--2006}
-{Ferath Kherif, working on multivariate statistics for clustering and
-diagnostics of functional imaging data. Ferath is a principal investigator at
-the Laboratory of Research in Neuroimaging, Lausanne, Switzerland}
-
-\PlaceDateNote{Cambridge University PhD}{2001--2004}
-{Jessica Grahn: {\em The functional anatomy of musical beat perception}.
-Jessica is an associate professor in the Brain and Mind Institute, Western
-University, Ontario}
-
-\PlaceDateNote{Cambridge University PhD}{2000--2004}
-{Katja Osswald: {\em The role of SMA and basal ganglia in motor learning,
-mechanisms of apraxia and methods of functional MRI analysis}. Katja is an
-associate lecturer at the department of psychology in York and an NHS clinical
-psychologist}
-
-\PlaceDateNote{Cambridge University post-doctoral research}{2001--2002}
-{Alexandre Andrade, on brain surface-based functional MRI statistics, coherence
-analysis.  Alexandre is assistant professor at the Physics Department of the
-Faculty of Sciences of the University of Lisbon}
-
-\end{cvSection}
-
-\begin{cvSection}{Reviewer}
-
-    PLOS One, F1000, NeuroImage; Human Brain Mapping; Journal of Cognitive
-    Neuroscience; Neuroscience Letters; Clinical Neurophysiology; Journal of
-    Neuroimaging; the Journal of Clinical and Experimental Neuropsychology;
-    Frontiers in Neuroinformatics; Computing in Science and Engineering;
-    Frontiers in Brain Imaging Methods; Frontiers in Neuroanatomy.
-
-\end{cvSection}
-
-\begin{cvSection}{Research metrics}[
-    \footnote{ From
-    \url{https://scholar.google.com/citations?user=q12RP7AAAAAJ} as of March
-    19, 2019}]
-
-{\bf Citations}: 14000 \\
-{\bf h-index}: 33 \\
-{\bf i10-index}: 39
-
-\end{cvSection}
-
-\begin{cvSection}{Articles}
-
-\printbibliography[heading=none,
-    keyword=article,
-    notkeyword=omit]
-
-\end{cvSection}
-
-\begin{cvSection}{Selected abstracts}
-
-\printbibliography[heading=none,
-    keyword=abstract,
-    notkeyword=omit]
+\printbibliography[heading=none]
 
 \end{cvSection}
 
